@@ -18,3 +18,14 @@ SelectionMenu::SelectionMenu (string menuOptions[], int length)
   sz = length;
 }
 
+int SelectionMenu::selectFromMenu ()
+{
+  cout << "Select an option below:\n";
+  displayMenu();
+
+  cout << ">> ";
+  int selection;
+  cin >> selection;
+  return selection;
+}
+

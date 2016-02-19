@@ -5,7 +5,8 @@ class SelectionMenu
 {
 public:
   SelectionMenu(string [], int);
-  void displayMenu ();
+  void displayMenu();
+  int selectFromMenu();
 private:
   string options[9];
   int sz;
