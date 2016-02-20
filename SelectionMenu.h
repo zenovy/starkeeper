@@ -1,10 +1,15 @@
 #include <string>
 using namespace std;
 
+enum class MenuType
+{
+  MAINMENU
+};
+
 class SelectionMenu
 {
 public:
-  SelectionMenu(string [], int);
+  SelectionMenu(MenuType);
   void displayMenu();
   int selectFromMenu();
 private:

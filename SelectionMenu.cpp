@@ -10,12 +10,19 @@ void SelectionMenu::displayMenu ()
   }
 }
 
-SelectionMenu::SelectionMenu (string menuOptions[], int length)
+SelectionMenu::SelectionMenu (MenuType mtype)
 {
-  for (int i = 0; i < length; i++) {
-    options[i] = menuOptions[i];
+  switch (mtype) {
+    case MenuType::MAINMENU:
+      options[0] = "New Game";
+      options[1] = "Load Game";
+      options[2] = "Quit";
+      sz = 3;
+      break;
+    default:
+      sz = 0;
+      break;
   }
-  sz = length;
 }
 
 int SelectionMenu::selectFromMenu ()
@@ -26,6 +33,7 @@ int SelectionMenu::selectFromMenu ()
   cout << ">> ";
   int selection;
   cin >> selection;
+  cout << "-- " << options[selection - 1] << " --\n";
   return selection;
 }
 

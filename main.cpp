@@ -10,9 +10,9 @@ int main (int args, char *argv[]) {
   UserPrefs thisUser(nameInput);
   cout << "You entered: \"" << thisUser.getName() << "\".\n";
 
-  string menuOptions[] = {"New Game","Load Game","Quit"};
-  SelectionMenu menu(menuOptions, 3);
+  MenuType mtype = MenuType::MAINMENU;
+  SelectionMenu menu(mtype);
+
   int selection = menu.selectFromMenu();
-  cout << "You entered: " << selection << "\n";
   return 0;
 }
