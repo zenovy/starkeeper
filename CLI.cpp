@@ -3,10 +3,18 @@
 #include "CLI.h"
 using namespace std;
 
-std::string CLI::getUserInput (std::string prompt)
+string CLI::getUserInput (string prompt)
 {
   string input = "";
   cout << prompt << "\n>> ";
+  cin >> input;
+  return input;
+}
+
+int CLI::getUserOption ()
+{
+  int input;
+  cout << ">> ";
   cin >> input;
   return input;
 }

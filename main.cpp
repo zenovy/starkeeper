@@ -8,10 +8,9 @@ using namespace std;
 int main (int args, char *argv[]) {
   string nameInput = CLI::getUserInput("Please enter a name..."); 
   UserPrefs thisUser(nameInput);
-  cout << "You entered: \"" << thisUser.getName() << "\".\n";
+  cout << "You entered: \"" << thisUser.getName() << "\".\n\n";
 
-  MenuType mtype = MenuType::MAINMENU;
-  SelectionMenu menu(mtype);
+  SelectionMenu menu(MenuType::MAINMENU);
 
   int selection = menu.selectFromMenu();
   return 0;

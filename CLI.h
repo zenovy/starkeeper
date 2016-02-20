@@ -1,6 +1,8 @@
 #include <string>
+using namespace std;
 
 namespace CLI
 {
-  std::string getUserInput(std::string);
+  string getUserInput(string);
+  int getUserOption();
 }

@@ -1,6 +1,7 @@
 #include "SelectionMenu.h"
 #include <string>
 #include <iostream>
+#include "CLI.h"
 using namespace std;
 
 void SelectionMenu::displayMenu ()
@@ -30,10 +31,8 @@ int SelectionMenu::selectFromMenu ()
   cout << "Select an option below:\n";
   displayMenu();
 
-  cout << ">> ";
-  int selection;
-  cin >> selection;
-  cout << "-- " << options[selection - 1] << " --\n";
+  int selection = CLI::getUserOption();
+  cout << "\n-- " << options[selection - 1] << " --\n\n";
   return selection;
 }
 
